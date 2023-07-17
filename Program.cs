@@ -6,7 +6,7 @@ class Program
         Console.Write("Enter size of array: ");
         int size = int.Parse(Console.ReadLine());
         int[] arr = new int[size];
-        int max1, max2;
+        int maxOne, maxTwo;
 
         Console.WriteLine("Enter {0} elements in the array:", size);
         for (int i = 0; i < size; i++)
@@ -15,24 +15,24 @@ class Program
         }
 
         
-        max1 = max2 = arr[0];
+        maxOne = maxTwo = arr[0];
 
         for (int i = 0; i < size; i++)
         {
             if (arr[i] > max1)
             {
-                max2 = max1;
-                max1 = arr[i];
+                maxTwo = maxOne;
+                maxOne = arr[i];
             }
-            else if (arr[i] > max2 && arr[i] < max1)
+            else if (arr[i] > maxTwo && arr[i] < maxOne)
             {
                 
-                max2 = arr[i];
+                maxTwo = arr[i];
             }
         }
 
         
-        Console.Write("Second Highest = {0}", max2);
+        Console.Write("Second Highest = {0}", maxTwo);
         Console.ReadLine();
     }
 }
